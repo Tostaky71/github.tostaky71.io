@@ -14,7 +14,7 @@ body {
     min-height: 100vh;
     margin: 0;
     min-height: 100vh;
-    background: url(Images/test-desk.jpeg) no-repeat;
+    background: url(Images/wallpaper2.png) no-repeat;
     background-size: cover;
     background-position: center;
 }
@@ -32,31 +32,158 @@ body {
 }
 .h1 a {
     font-size: 16px;
-    color: white;
+    color: rgb(165, 93, 42);
     text-decoration: none;
     font-weight: 400;
-    transition: color 0.3s;
+    transition: color 0.2s;
 }
 
-.h1 a:hover {
-    color: yellowgreen;
+.h1 .menutop:hover {
+    color: grey;
 }
+
 
 .h1 .logo {
     font-size: 34px;
-    color: white;
+    color: rgb(165, 93, 42);
     font-weight: 700;
 }
 
-.h1 .logo:hover {
-    color:white;
+.h4 .logo {
+    position: fixed;
+    text-decoration: none;
+    top: 0%;
+    left: 5%;
+    height: 10%;
+    font-size: 34px;
+    color: rgb(165, 93, 42);
+    font-weight: 700;
+    align-items: center;
+    background: transparent;
+    display: none;
 }
+
+.h5 {
+    position:fixed;
+    top: 0%;
+    right: 0%;
+    width: 50%;
+    height: 100%;
+    background: transparent;
+    justify-content: right;
+    align-items: center;
+    z-index: 0;
+}
+
+
+
+.h5 .menuDeroulant {
+    position: fixed;
+    width: 20%;
+    height: 10%;
+    right: 0%;
+    text-decoration: none;
+    font-size: 16px;
+    color: rgb(165, 93, 42);
+    font-weight: 400;
+    background: transparent;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.h5 .menuDeroulant div {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+}
+
+.h5 .menuDeroulant .bkg {
+    position: fixed;   
+    top: 0%;
+    right: 0%;
+    width: 40%;
+    height: 100%;
+    background: beige;
+}
+
+.h5 .menuDeroulant .presentation {
+    position: fixed;
+    top: 15%;
+    right: 0%;
+    width: 40%;
+    height: 10%;
+    color:rgb(165, 93, 42);
+}
+
+.h5 .menuDeroulant .ateliers {
+    position: fixed;
+    top: 25%;
+    right: 0%;
+    width: 40%;
+    height: 10%;
+    color:rgb(165, 93, 42);
+}
+
+.h5 .menuDeroulant .contact {
+    position: fixed;
+    top: 35%;
+    right: 0%;
+    width: 40%;
+    height: 10%;
+    color:rgb(165, 93, 42);
+}
+
+.h5 .menuDeroulant .close {
+    position: fixed;
+    top: 0%;
+    right: 0%;
+    width: 20%;
+    height: 10%;
+    color: grey;
+}
+
+
+@media screen and (max-width: 800px) {
+    .h1 {
+        display: none;
+    }
+    .h4 .logo {
+        display: flex;
+    }
+    .h5 .menuDeroulant {
+        display: flex;
+    }
+    .h5 .menuDeroulant:focus {
+        z-index: 1000;
+    }
+    .h5 .menuDeroulant:focus div {
+        display: flex;
+    }
+    .h5 .menuDeroulant:focus .bkg {
+        display: flex;
+    }
+    .h5 .menuDeroulant:focus div:hover {
+        color:grey;
+    }
+}
+
+
+
+
+
+
+
+
+
+
 
 .h2 {
     position: fixed;
     top: 30%;
     width: 95%;
-    height: 60%;
+    height: 40%;
     background: transparent;
     display: flex;
     justify-content: space-evenly;
@@ -73,11 +200,12 @@ body {
     align-items: center;
 }
 
-.h2 a {
-    font-size: 16px;
+.h2 div {
+    font-size: 20px;
     color: white;
     text-decoration: none;
-    font-weight: 400;
+    font-weight: 600;
+    text-shadow: 0 0 0.5em black;
 }
 
 .h2 div div {
@@ -87,13 +215,56 @@ body {
     background-size: cover;
     background-position: center;
     z-index: 100;
-    box-shadow: 0 0 0.3em yellow;
+    box-shadow: 0 0 0.5em bisque;
     transition: width 0.5s
 }
 
-.h2 div div:hover {
+.h2 div div a {
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    text-shadow: 0 0 0.5em black;
+}
+
+.h2 div .portfolio:hover {
     position: relative;
     width: 25%;
+    background: url(Images/tableaux2.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.h2 div .tableaux:hover {
+    position: relative;
+    width: 25%;
+    background: url(Images/tableaux.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.h2 div .prints:hover {
+    position: relative;
+    width: 25%;
+    background: url(Images/prints.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.h2 div .croquis:hover {
+    position: relative;
+    width: 25%;
+    background: url(Images/croquis.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.h2 div .portraits:hover {
+    position: relative;
+    width: 25%;
+    background: url(Images/portraits.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .h3 {
@@ -106,6 +277,37 @@ body {
     justify-content: center;
     align-items: center;
     font-style: italic;
-    color: burlywood;
+    color: gray;
     font-weight: 400;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer {
+    position: fixed;
+    display: flex;
+    bottom: 0%;
+    width: 5%;
+    height: 10%;
+    background: transparent;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer img {
+    width: 40px;
+}
+
+.footer img:hover {
+    filter: invert(50%);
 }
